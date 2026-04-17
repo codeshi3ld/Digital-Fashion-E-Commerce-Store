@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- ================= META DATA & PAGE SETTINGS ================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ================= FONT AWESOME ICONS ================= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ================= PAGE TITLE ================= -->
+  <title>A3RO Style Navbar</title>
+
+  <!-- ================= EXTERNAL CSS FILES ================= -->
+  <link rel="stylesheet" href="men.css">
+  <link rel="stylesheet" href="common.css">
+
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAVIGATION BAR ================= -->
+  <header class="navbar">
+
+    <!-- ================= LOGO SECTION ================= -->
+    <div class="logo">
+      <span class="logo-icon">🌀</span>
+      A3RO
+    </div>
+
+    <!-- ================= HAMBURGER MENU (MOBILE VIEW) ================= -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- ================= NAVIGATION LINKS ================= -->
+    <nav class="nav-links" id="navLinks">
+      <a href="home.html">Footwear</a>
+      <a href="men.html">Men</a>
+      <a href="women.html">Women</a>
+      <a href="kids.html">Kids</a>
+    </nav>
+
+    <!-- ================= RIGHT NAVIGATION ICONS ================= -->
+    <div class="right-nav">
+
+      <!-- ================= SEARCH BAR ================= -->
+      <div class="search-container">
+        <input class="search" type="text" id="searchInput" placeholder="Search items..." onkeypress="handleKey(event)" />
+        <button class="search-btn" aria-label="Search" onclick="searchItems()">🔍</button>
+      </div>
+
+      <!-- ================= SEARCH NOT FOUND MESSAGE ================= -->
+      <p id="noResults">Not found.</p>
+
+      <!-- ================= USER ACCOUNT ICON ================= -->
+      <div class="icon-with-badge">
+        <span class="icon">👤</span>
+        <span class="badge">1</span>
+      </div>
+
+      <!-- ================= WISHLIST ICON ================= -->
+      <div class="icon-with-badge">
+        <span class="icon">♡</span>
+        <span class="badge">0</span>
+      </div>
+
+      <!-- ================= SHOPPING CART ICON ================= -->
+      <div class="icon-with-badge">
+        <span class="icon">🛍️</span>
+        <span class="badge">0</span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ================= PRODUCT SECTION 1 ================= -->
+  <div class="product-section">
+
+    <!-- ================= PRODUCT CATEGORY BUTTONS ================= -->
+    <div class="top-buttons">
+      <a href="#" class="active">Urban Motion</a>
+      <a href="#">Speed Collection</a>
+    </div>
+
+    <!-- ================= PRODUCT SLIDER ================= -->
+    <div class="product-slider">
+
+      <!-- ================= PRODUCT CARD ================= -->
+      <div class="product-card">
+        <a href="#">
+          <img src="nike tshirt black.png" alt="Nike Sportswear T-Shirt">
+          <p class="price">₱1,800</p>
+          <h4>NIKE SPORTSWEAR T-SHIRT</h4>
+          <span>Sportswear</span>
+        </a>
+      </div>
+
+      <!-- ================= PRODUCT CARD ================= -->
+      <div class="product-card">
+        <a href="#">
+          <img src="adidas yellow t shirt.png" alt="Adidas Trefoil T-Shirt">
+          <p class="price">₱2,200</p>
+          <h4>ADIDAS TREFOIL T-SHIRT</h4>
+          <span>Sportswear</span>
+        </a>
+      </div>
+
+      <!-- ================= PRODUCT CARD ================= -->
+      <div class="product-card">
+        <a href="#">
+          <img src="rebook tshirt.png" alt="Reebok Classic T-Shirt">
+          <p class="price">₱1,200</p>
+          <h4>REEBOK CLASSIC T-SHIRT</h4>
+          <span>Sportswear</span>
+        </a>
+      </div>
+
+      <!-- ================= PRODUCT CARD ================= -->
+      <div class="product-card">
+        <a href="#">
+          <img src="oakley darkgreen.png" alt="Oakley Logo T-Shirt">
+          <p class="price">₱1,600</p>
+          <h4>OAKLEY LOGO T-SHIRT</h4>
+          <span>Sportswear</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================= PRODUCT SECTION 2 ================= -->
+  <div class="product-section">
+
+    <!-- ================= PRODUCT SLIDER ================= -->
+    <div class="product-slider">
+
+      <!-- ================= PRODUCT CARD ================= -->
+      <div class="product-card">
+        <a href="#">
+          <img src="puma tshirt grey.png" alt="Puma Classic Logo T-Shirt">
+          <p class="price">₱1,800</p>
+          <h4>PUMA CLASSIC LOGO T-SHIRT</h4>
+          <span>Sportswear</span>
+        </a>
+      </div>
+
+      <!-- ================= PRODUCT CARD ================= -->
+      <div class="product-card">
+        <a href="#">
+          <img src="sketchers brown tshirt.png" alt="Skechers Sport Logo T-Shirt">
+          <p class="price">₱2,200</p>
+          <h4>SKECHERS SPORT LOGO T-SHIRT</h4>
+          <span>Sportswear</span>
+        </a>
+      </div>
+
+      <!-- ================= PRODUCT CARD ================= -->
+      <div class="product-card">
+        <a href="#">
+          <img src="red north face t shirt.png" alt="The North Face Classic T-Shirt">
+          <p class="price">₱1,200</p>
+          <h4>THE NORTH FACE CLASSIC T-SHIRT</h4>
+          <span>Sportswear</span>
+        </a>
+      </div>
+
+      <!-- ================= PRODUCT CARD ================= -->
+      <div class="product-card">
+        <a href="#">
+          <img src="stripe lacoste tshirt.png" alt="Lacoste Stripe T-Shirt">
+          <p class="price">₱1,600</p>
+          <h4>LACOSTE STRIPE T-SHIRT</h4>
+          <span>Sportswear</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer class="site-footer">
+
+    <!-- ================= FOOTER LINKS WRAPPER ================= -->
+    <div class="footer-wrapper">
+
+      <!-- ================= SHOP SECTION ================= -->
+      <div class="footer-column">
+        <h4>SHOP</h4>
+        <ul>
+          <li><a href="home.html">Footwear</a></li>
+          <li><a href="men.html">Men's</a></li>
+          <li><a href="#">Women's</a></li>
+          <li><a href="#">Kids</a></li>
+        </ul>
+      </div>
+
+      <!-- ================= CUSTOMER HELP SECTION ================= -->
+      <div class="footer-column">
+        <h4>CUSTOMER HELP</h4>
+        <ul>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- ================= ABOUT STORE SECTION ================= -->
+      <div class="footer-column">
+        <h4>ABOUT OUR STORE</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ================= SOCIAL MEDIA ICONS ================= -->
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- ================= COPYRIGHT SECTION ================= -->
+    <div class="footer-bottom">
+      <p>© 2026 YourBrand. All Rights Reserved.</p>
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT FILE ================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>

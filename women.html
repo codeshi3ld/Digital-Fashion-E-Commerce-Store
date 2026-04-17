@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- ================= META DATA & PAGE SETTINGS ================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ================= FONT AWESOME ICONS ================= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ================= PAGE TITLE ================= -->
+  <title>A3RO Style Navbar</title>
+
+  <!-- ================= EXTERNAL CSS FILES ================= -->
+  <link rel="stylesheet" href="women.css">
+  <link rel="stylesheet" href="common.css">
+  
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAVIGATION BAR ================= -->
+  <header class="navbar">
+
+    <!-- ================= LOGO SECTION ================= -->
+    <div class="logo">
+      <span class="logo-icon">🌀</span>
+      A3RO
+    </div>
+
+    <!-- ================= HAMBURGER MENU (MOBILE VIEW) ================= -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- ================= NAVIGATION LINKS ================= -->
+    <nav class="nav-links" id="navLinks">
+      <a href="home.html">Footwear</a>
+      <a href="men.html">Men</a>
+      <a href="women.html">Women</a>
+      <a href="kids.html">Kids</a>
+    </nav>
+
+    <!-- ================= RIGHT NAVIGATION ICONS ================= -->
+    <div class="right-nav">
+
+      <!-- ================= SEARCH BAR ================= -->
+      <div class="search-container">
+        <input class="search" type="text" id="searchInput" placeholder="Search items..." onkeypress="handleKey(event)" />
+        <button class="search-btn" aria-label="Search" onclick="searchItems()">🔍</button>
+      </div>
+
+      <!-- ================= SEARCH NOT FOUND MESSAGE ================= -->
+      <p id="noResults">Not found.</p>
+
+      <!-- ================= USER ACCOUNT ICON ================= -->
+      <div class="icon-with-badge">
+        <span class="icon">👤</span>
+        <span class="badge">1</span>
+      </div>
+
+      <!-- ================= WISHLIST ICON ================= -->
+      <div class="icon-with-badge">
+        <span class="icon">♡</span>
+        <span class="badge">0</span>
+      </div>
+
+      <!-- ================= SHOPPING CART ICON ================= -->
+      <div class="icon-with-badge">
+        <span class="icon">🛍️</span>
+        <span class="badge">0</span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ================= PRODUCT SECTION 1 ================= -->
+<div class="product-section">
+  <div class="product-slider">
+
+    <!-- RED DRESS -->
+    <div class="product-card">
+      <a href="#">
+        <img id="girl-red-dress" src="girl red shirt.png">
+      </a>
+      <a href="#">
+        <h4>₱1,499</h4>
+        <p>Women's Puff Sleeve Mini Dress</p>
+        <span>Zara</span>
+      </a>
+
+      <div class="colors">
+        <span class="color red" onclick="changeColor('girl-red-dress','girl red shirt.png')"></span>
+        <span class="color lightblue" onclick="changeColor('girl-red-dress','girl light blue shirt.png')"></span>
+        <span class="color yellow" onclick="changeColor('girl-red-dress','yellow girl t shirt.png')"></span>
+        <span class="color avocado" onclick="changeColor('girl-red-dress','avocado girl green.png')"></span>
+      </div>
+    </div>
+
+    <!-- BLACK TSHIRT -->
+    <div class="product-card">
+      <a href="#">
+        <img id="women-black-shirt" src="womenblacktshirt.png">
+      </a>
+      <a href="#">
+        <h4>₱590</h4>
+        <p>Men's Basic Crew Neck T-Shirt</p>
+        <span>Uniqlo</span>
+      </a>
+
+      <div class="colors">
+        <span class="color black" onclick="changeColor('women-black-shirt','womenblacktshirt.png')"></span>
+        <span class="color grey" onclick="changeColor('women-black-shirt','womengreytshirt.png')"></span>
+      </div>
+    </div>
+
+    <!-- MAROON TSHIRT -->
+    <div class="product-card">
+      <a href="#">
+        <img id="women-maroon-shirt" src="womenmarooncolor.png">
+      </a>
+      <a href="#">
+        <h4>₱499</h4>
+        <p>Women's Slim Fit Cotton T-Shirt</p>
+        <span>H&M</span>
+      </a>
+
+      <div class="colors">
+        <span class="color maroon" onclick="changeColor('women-maroon-shirt','womenmarooncolor.png')"></span>
+        <span class="color darkblue" onclick="changeColor('women-maroon-shirt','womendarkbluecolor.png')"></span>
+      </div>
+    </div>
+
+    <!-- GREEN NORTH FACE SHIRT -->
+    <div class="product-card">
+      <a href="#">
+        <img id="northface-shirt" src="northfacewomenshirt.png">
+      </a>
+      <a href="#">
+        <h4>₱1,800</h4>
+        <p>Women's Short Sleeve Tee</p>
+        <span>The North Face</span>
+      </a>
+
+      <div class="colors">
+        <span class="color whitesmoke" onclick="changeColor('northface-shirt','northfacewomenshirt.png')"></span>
+        <span class="color green" onclick="changeColor('northface-shirt','northfacewomengreenshirt.png')"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer class="site-footer">
+
+    <div class="footer-wrapper">
+
+      <div class="footer-column">
+        <h4>SHOP</h4>
+        <ul>
+          <li><a href="home.html">Footwear</a></li>
+          <li><a href="men.html">Men's</a></li>
+          <li><a href="#">Women's</a></li>
+          <li><a href="#">Kids</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>CUSTOMER HELP</h4>
+        <ul>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>ABOUT OUR STORE</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 YourBrand. All Rights Reserved.</p>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+/* HERO AUTO COLOR CHANGE + VERY SLOW TEXT SLIDE */
+
+
+
+.hero {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+ 
+
+  /* background color animation untouched */
+  animation: heroColor 12s infinite;
+
+  /* text slow slide + fade */
+  transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hero.fade{
+  opacity: 0;
+  transform: translateY(-40px); /* small upward slide */
+}
+
+@keyframes heroColor{
+  0%{ background: #033b3b; }
+  10%{ background: #111111; }
+  20%{ background: #1f1f1f; }
+  30%{ background: #2a2a2a; }
+  40%{ background: #3a3a3a; }
+  50%{ background: #483d8b; }
+  60%{ background: #0f52ba; }
+  70%{ background: #1c7c7c; }
+  80%{ background: #8b3a3a; }
+  90%{ background: #8b0a50; }
+  100%{ background: #022b2b; }
+}
+
+
+/* ===== PRODUCT SECTION (Adidas Style Product Grid) ===== */
+
+.products{
+padding:40px 90px;
+}
+
+
+.product-grid.hidden{
+  display: none;
+}
+
+.products-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.tabs{
+display:flex;
+gap:10px;
+}
+
+.tabs button{
+padding:8px 14px;
+border:1px solid #ccc;
+background:white;
+cursor:pointer;
+font-style: italic;
+}
+
+.tabs .active{
+background:black;
+color:white;
+font-style: italic;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.view-all{
+text-decoration:none;
+font-weight:bold;
+color:black;
+font-style: italic;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.product-card{
+background:#f5f5f5;
+padding:15px;
+text-align:left;
+font-style: italic;
+}
+
+.product-card img{
+ width:100%;
+}
+
+.product-card h4{
+margin-top:10px;
+}
+
+.product-card span{
+color:gray;
+font-size:14px;
+}
+
+
+/* ===== COLOR PICKER (NEW) ===== */
+
+.colors{
+display:flex;
+gap:8px;
+margin-top:10px;
+}
+
+.color{
+width:16px;
+height:16px;
+border-radius:50%;
+cursor:pointer;
+border:1px solid #ccc;
+}
+
+.color.red{
+background:red;
+}
+
+.color.blue{
+background:blue;
+}
+
+.color.green{
+background:green;
+}
+
+.color.yellow{
+background:yellow;
+}
+
+.color.pink{
+background:pink;
+}
+
+.color.grey{
+background:grey;
+}
+
+.color.white{
+background:white;
+}
+
+.color.gold{
+background: gold;
+}
+
+.color.black{
+background: black;
+}
+
+.color.orange{
+background: orange;
+}
+
+.color.brown{
+background: brown;
+}
+
+.color.maroon{
+background: maroon;
+}
+
+.color.fatigue{
+background: rgb(13, 36, 13);
+}
+
+.color.lightblue{
+background: lightblue;
+}
+
+.color.darkblue{
+background: darkblue;
+}
+
+.color.skincolor{
+background: rgb(95, 95, 6);
+}
+
+
+/* ===== TABLET RESPONSIVE ===== */
+
+@media (max-width:1024px){
+
+/* HERO */
+.hero{
+font-size:40px;
+text-align:center;
+padding:20px;
+}
+
+/* PRODUCT SECTION */
+.products{
+padding:30px 40px;
+}
+
+/* product grid for tablet */
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+/* product card center */
+.product-card{
+text-align:center;
+}
+
+/* center colors */
+.colors{
+justify-content:center;
+}
+
+}
+
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width:768px){
+
+/* HERO */
+.hero{
+font-size:32px;
+text-align:center;
+padding:20px;
+}
+
+/* PRODUCT SECTION */
+.products{
+padding:20px;
+text-align:center;
+}
+
+/* header stack vertically */
+.products-header{
+flex-direction:column;
+gap:10px;
+}
+
+/* center tabs */
+.tabs{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+}
+
+/* product grid 2 items on mobile */
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+/* product card */
+.product-card{
+text-align:center;
+}
+
+.colors{
+justify-content:center;
+}
+
+/* ===== NAVBAR FIX FOR MOBILE LANDSCAPE ===== */
+
+@media (max-width: 768px) and (orientation: landscape){
+
+/* navbar spacing */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* hide nav links to avoid cramped layout */
+.nav-links{
+  display: none;
+}
+
+/* right side (search + icons) */
+.right-nav{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* make search smaller */
+.search-container{
+  display: flex;
+  align-items: center;
+}
+
+.search{
+  width: 120px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+/* hide "Not found" text because it breaks layout */
+#noResults{
+  display: none;
+}
+
+#noResults {
+  display: none;
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+}
+
+/* smaller icons */
+.icon-with-badge .icon{
+  font-size: 16px;
+}
+
+/* smaller badge */
+.badge{
+  font-size: 10px;
+  padding: 2px 4px;
+}
+
+/* show hamburger menu */
+.hamburger{
+  display: block;
+}
+
+}
+
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ================= PAGE TITLE ================= -->
+  <title>A3RO Style Navbar</title>
+
+  <!-- ================= EXTERNAL CSS FILES ================= -->
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="common.css">
+
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">🌀</span> <!-- optional icon -->
+      A3RO
+    </div>
+
+    <!-- ================= HAMBURGER MENU (MOBILE) ================= -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="home.html">Footwear</a>
+      <a href="men.html">Men</a>
+      <a href="women.html">Women</a>
+      <a href="kids.html">Kids</a>
+    </nav>
+
+    <div class="right-nav">
+
+      <div class="search-container">
+        <input class="search" type="text" id="searchInput" placeholder="Search items..." onkeypress="handleKey(event)" />
+        <button class="search-btn" aria-label="Search" onclick="searchItems()">🔍</button>
+        
+      </div>
+
+      <p id="noResults">Not found.</p>
+
+      <!-- ================= USER ACCOUNT ICON ================= -->
+      <div class="icon-with-badge">
+        <span class="icon">👤</span>
+        <span class="badge">1</span>
+      </div>
+
+      <!-- ================= WISHLIST ICON ================= -->
+      <div class="icon-with-badge">
+        <span class="icon">♡</span>
+        <span class="badge">0</span>
+      </div>
+
+      <!-- ================= SHOPPING CART ICON ================= -->
+      <div class="icon-with-badge">
+        <span class="icon">🛍️</span>
+        <span class="badge">0</span>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO SECTION / MAIN BANNER ================= -->
+  <section class="hero" id="heroText">
+    AIR MAX 95
+  </section>
+
+  <section class="products">
+    <div class="products-header">
+      <a href="#" class="view-all">VIEW ALL</a>
+
+      <div class="tabs">
+        <button class="active">Superstar ⭐</button>
+        <button>Top Seller</button>
+        <button>New Arrivals ✨</button>
+      </div>
+
+    </div>
+
+  <section class="product-section">
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <a href="#">
+        <img id="shoe1" src="redshoes.png">
+      </a>
+      <a href="#">
+        <h4>₱6,000</h4>
+        <p>Nike Air Max 90</p>
+        <span>Originals</span>
+      </a>
+
+      <div class="colors">
+        <span class="color red" onclick="changeColor('shoe1','redshoes.png')"></span>
+        <span class="color blue" onclick="changeColor('shoe1','blueshoes.png')"></span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a href="#">
+        <img id="shoe2" src="greenshoes.png">
+      </a>
+      <a href="#">
+        <h4>₱6,000</h4>
+        <p>Adidas Originals Superstar II Shoes</p>
+        <span>Originals</span>
+      </a>
+
+      <div class="colors">
+        <span class="color green" onclick="changeColor('shoe2','greenshoes.png')"></span>
+        <span class="color yellow" onclick="changeColor('shoe2','yellowshoes.png')"></span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a href="#">
+        <img id="shoe3" src="pinkshoes.png">
+      </a>
+      <a href="#">
+        <h4>₱6,000</h4>
+        <p>Puma Smash v2 Suede Sneakers</p>
+        <span>Originals</span>
+      </a>
+
+      <div class="colors">
+        <span class="color pink" onclick="changeColor('shoe3','pinkshoes.png')"></span>
+        <span class="color grey" onclick="changeColor('shoe3','greyshoes.png')"></span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a href="#">
+        <img id="shoe4" src="whiteshoes.png">
+      </a>
+      <a href="#">
+        <h4>₱6,000</h4>
+        <p>Onitsuka Tiger Mexico 66 Sneakers</p>
+        <span>Originals</span>
+      </a>
+
+      <div class="colors">
+        <span class="color white" onclick="changeColor('shoe4','whiteshoes.png')"></span>
+        <span class="color gold" onclick="changeColor('shoe4','whitegoldshoes.png')"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="product-grid hidden">
+
+    <div class="product-card">
+      <a href="#">
+        <img id="shoe5" src="blackvanzshoes.png">
+      </a>
+      <a href="#">
+        <h4>₱6,000</h4>
+        <p>Vans Old Skool</p>
+        <span>Originals</span>
+      </a>
+
+      <div class="colors">
+        <span class="color black" onclick="changeColor('shoe5','blackvanzshoes.png')"></span>
+        <span class="color orange" onclick="changeColor('shoe5','orangevanzshoes.png')"></span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a href="#">
+        <img id="shoe6" src="brownsketchers.png">
+      </a>
+      <a href="#">
+        <h4>₱6,000</h4>
+        <p>Skechers D’Lites</p>
+        <span>Originals</span>
+      </a>
+
+      <div class="colors">
+        <span class="color brown" onclick="changeColor('shoe6','brownsketchers.png')"></span>
+        <span class="color maroon" onclick="changeColor('shoe6','maroonsketchers.png')"></span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a href="#">
+        <img id="shoe7" src="rebookfatigue.png">
+      </a>
+      <a href="#">
+        <h4>₱6,000</h4>
+        <p>Reebok Classic Leather</p>
+        <span>Originals</span>
+      </a>
+
+      <div class="colors">
+        <span class="color fatigue" onclick="changeColor('shoe7','rebookfatigue.png')"></span>
+        <span class="color lightblue" onclick="changeColor('shoe7','rebooklightblue.png')"></span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a href="#">
+        <img id="shoe8" src="meryldarkbluecolor.png">
+      </a>
+      <a href="#">
+        <h4>₱6,000</h4>
+        <p>Merrell Moab 3 Hiking Shoes</p>
+        <span>Originals</span>
+      </a>
+
+      <div class="colors">
+        <span class="color darkblue" onclick="changeColor('shoe8','meryldarkbluecolor.png')"></span>
+        <span class="color skincolor" onclick="changeColor('shoe8','merylskincolor.png')"></span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+  <footer class="site-footer">
+
+    <div class="footer-wrapper">
+
+      <div class="footer-column">
+        <h4>SHOP</h4>
+        <ul>
+          <li><a href="home.html">Footwear</a></li>
+          <li><a href="men.html">Men's</a></li>
+          <li><a href="#">Women's</a></li>
+          <li><a href="#">Kids</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>CUSTOMER HELP</h4>
+        <ul>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>ABOUT OUR STORE</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 YourBrand. All Rights Reserved.</p>
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT FILE ================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
